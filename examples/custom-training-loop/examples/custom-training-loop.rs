@@ -5,7 +5,10 @@ fn main() {
 }
 
 mod test {
-    use burn::{backend::{wgpu::WgpuDevice, Autodiff, Wgpu}, tensor::Tensor};
+    use burn::{
+        backend::{wgpu::WgpuDevice, Autodiff, Wgpu},
+        tensor::Tensor,
+    };
 
     #[test]
     fn trivial() {
@@ -19,7 +22,6 @@ mod test {
         } else {
             print!("No grad.");
         }
-
     }
 
     #[test]
@@ -72,12 +74,6 @@ mod test {
             print!("No grad_x.");
         }
     }
-}
-    use burn::{
-        backend::{wgpu::WgpuDevice, Autodiff, Wgpu},
-        tensor::Tensor,
-    };
-
     #[test]
     fn python_analog() {
         type Backend = Autodiff<Autodiff<Wgpu>>;
