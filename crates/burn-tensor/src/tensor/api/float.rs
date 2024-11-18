@@ -280,6 +280,7 @@ where
     ///
     /// This function does nothing when autodiff is not enabled.
     pub fn require_grad(self) -> Self {
+        println!("require grad: {}", self);
         self.set_require_grad(true)
     }
 
